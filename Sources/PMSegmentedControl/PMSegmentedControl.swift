@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable class PMSegmentedControl: UIControl {
+@IBDesignable public class PMSegmentedControl: UIControl {
   weak var delegate: PMSegmentedControlDelegate?
 
   private var labels = [UILabel]()
@@ -66,7 +66,7 @@ import UIKit
   }
   
   
-  override func layoutSubviews() {
+  public override func layoutSubviews() {
     super.layoutSubviews()
     
     var selectedFrame = self.bounds
@@ -90,7 +90,7 @@ import UIKit
   }
   
   
-  override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+  public override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
     let location = touch.location(in: self)
     var calculatedIndex: Int?
     
