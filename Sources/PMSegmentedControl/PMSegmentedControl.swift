@@ -55,6 +55,13 @@ public class PMSegmentedControl: UIControl {
   }
   
   @IBInspectable
+  public var borderWidth: CGFloat = 0.5 {
+    didSet {
+      layer.borderWidth = borderWidth
+    }
+  }
+  
+  @IBInspectable
   public var font: UIFont! = UIFont.systemFont(ofSize: 12) {
     didSet {
       setFont()

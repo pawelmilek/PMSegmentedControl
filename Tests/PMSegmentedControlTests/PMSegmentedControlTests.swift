@@ -81,6 +81,19 @@ final class PMSegmentedControlTests: XCTestCase {
     XCTAssertEqual(sut.borderColor, expected)
   }
   
+  
+  
+  func testSetBorderWidth_set2_setsBorderWidthTo2() {
+    // given
+    let expected = CGFloat(2.0)
+
+    // when
+    sut.borderWidth = 2.0
+    
+    // then
+    XCTAssertEqual(sut.borderWidth, expected)
+  }
+  
   func testSetThumbColorColor_white_setsThumbColorToWhite() {
     // given
     let expected = UIColor.white
