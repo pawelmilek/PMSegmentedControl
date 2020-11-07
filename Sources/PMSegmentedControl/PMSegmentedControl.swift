@@ -7,49 +7,55 @@
 
 import UIKit
 
-@IBDesignable public class PMSegmentedControl: UIControl {
+@IBDesignable
+public class PMSegmentedControl: UIControl {
   weak var delegate: PMSegmentedControlDelegate?
 
   private var labels = [UILabel]()
   private var thumbView = UIView()
   
-  var items: [String] = ["Item 1"] {
+  public var items: [String] = ["Item 1"] {
     didSet {
       setupLabels()
     }
   }
   
-  var selectedIndex: Int = 0 {
+  public var selectedIndex: Int = 0 {
     didSet {
       displayNewSelectedIndex()
     }
   }
   
-  @IBInspectable var selectedLabelColor: UIColor = .black {
+  @IBInspectable
+  public var selectedLabelColor: UIColor = .black {
     didSet {
       setSelectedColors()
     }
   }
   
-  @IBInspectable var unselectedLabelColor: UIColor = .white {
+  @IBInspectable
+  public var unselectedLabelColor: UIColor = .white {
     didSet {
       setSelectedColors()
     }
   }
   
-  @IBInspectable var thumbColor: UIColor = .white {
+  @IBInspectable
+  public var thumbColor: UIColor = .white {
     didSet {
       setSelectedColors()
     }
   }
   
-  @IBInspectable var borderColor: UIColor = .white {
+  @IBInspectable
+  public var borderColor: UIColor = .white {
     didSet {
       layer.borderColor = borderColor.cgColor
     }
   }
   
-  @IBInspectable var font: UIFont! = UIFont.systemFont(ofSize: 12) {
+  @IBInspectable
+  public var font: UIFont! = UIFont.systemFont(ofSize: 12) {
     didSet {
       setFont()
     }
