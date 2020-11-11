@@ -9,7 +9,7 @@ import UIKit
 
 @IBDesignable
 public class PMSegmentedControl: UIControl {
-  weak var delegate: PMSegmentedControlDelegate?
+  public weak var delegate: PMSegmentedControlDelegate?
 
   private var labels = [UILabel]()
   private var thumbView = UIView()
