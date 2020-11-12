@@ -68,6 +68,10 @@ public class PMSegmentedControl: UIControl {
     }
   }
 
+  convenience init(frame: CGRect, primaryAction: UIAction?) {
+    self.init(frame: frame)
+  }
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     setUp()
