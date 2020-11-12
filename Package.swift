@@ -24,5 +24,8 @@ let package = Package(
         .testTarget(
             name: "PMSegmentedControlTests",
             dependencies: ["PMSegmentedControl"]),
-    ]
+    ],
+    swiftLanguageVersions: [
+      .v5
+  ]
 )
